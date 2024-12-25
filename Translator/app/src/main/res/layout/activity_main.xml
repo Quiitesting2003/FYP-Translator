@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_translate"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Translator"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_margin="5dp"
+                    android:hint="SELECT"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/language_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/exchangeButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_exchange"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_margin="5dp"
+                    android:hint="SELECT"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/language_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="353dp"
+                android:layout_height="212dp"
+                android:background="@drawable/translate_spinner_background"
+                android:gravity="top"
+                android:hint="Enter text"
+                android:inputType="textImeMultiLine|textMultiLine"
+                android:textSize="20sp"></EditText>
+
+            <Button
+                android:id="@+id/translate"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:backgroundTint="#0b62f5"
+                android:text="Translate"
+                android:textSize="22.5sp"
+                android:textAllCaps="false">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="347dp"
+                android:layout_height="108dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/translate_spinner_background"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:hint="Translated text here"
+                android:letterSpacing="0.03"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDarks"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp" />
+
+            <ImageView
+                android:id="@+id/idMic"
+                android:layout_width="64dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_voice"
+                android:contentDescription="Microphone for voice input"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
